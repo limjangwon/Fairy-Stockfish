@@ -918,7 +918,7 @@ namespace {
                 int dist =  distance(s1, s2)
                           + (isKingCTF || pos.flag_move() ? popcount(pos.attackers_to(s2, Them)) : 0)
                           + !!(pos.pieces(Us) & s2);
-                score += make_score(2500, 2500) / (1 + scale * dist * dist);
+                score += make_score(2550, 2500) / (1 + scale * dist * dist);
             }
         }
     }
