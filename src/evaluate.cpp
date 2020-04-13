@@ -928,7 +928,7 @@ namespace {
     {
         int remainingChecks = pos.checks_remaining(Us);
         assert(remainingChecks > 0);
-        score += make_score(3600, 1000) / (remainingChecks * remainingChecks);
+        score += make_score(3600, 1000 + 1000 * pos.count<QUEEN>(Us)) / (remainingChecks * remainingChecks);
     }
 
     // Extinction
